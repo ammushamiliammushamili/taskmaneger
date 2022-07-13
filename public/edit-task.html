@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT TASk</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+        integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="edit-task.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="new-task">
+            <h1>EDIT TASK</h1><br>
+            <input type="date" name="Due-date" class="box" placeholder="Due-date" id="due-date" required><br><br>
+            <input type="text" name="data-description" class="box" placeholder="data-description" id="data-description"
+                required><br><br>
+            <input type="submit" id="submit">
+
+        </form>
+        <!-- <div class="side">
+            <img src="https://thumbs.dreamstime.com/b/yes-can-positive-inspiring-statement-banner-two-men-holding-clean-background-33109542.jpg"
+                alt="">
+        </div> -->
+
+    </div>
+
+    </div>
+
+    <script>
+        const params = window.location.search
+        const id = new URLSearchParams(params).get('id')
+        console.log(id);
+        async function start() {
+            let { data } = await axios.get("http://localhost:3000/api/v1/single-task/" + id)
+            console.log(data);
+            console.log(data.task.taskDescription);
+            console.log(data.task.dueDate);
+            if (data.success) {
+                document.getElementById("data-description").value = data.task.taskDescription
+                document.getElementById("due-date").value = data.task.dueDate
+
+            }
+        }
+        start()
+
+        document.getElementById('new-task').addEventListener("submit", function (e) { sumbitFunc(e) })
+
+        async function sumbitFunc(e) {
+            e.preventDefault()
+            // alert('hi');
+            let dueDate = document.getElementById('due-date').value
+            let taskDescription = document.getElementById('data-description').value
+            let obj = {
+                dueDate, taskDescription
+            }
+            let { data } = await axios.patch('http://localhost:3000/api/v1/edit-task/' + id, obj)
+            if (data.success) {
+                alert(data.msg)
+                window.location.href = "http://localhost:3000/task-card.html"
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

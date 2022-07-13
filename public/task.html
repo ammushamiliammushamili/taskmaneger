@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="task.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+        integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="newtask">
+            <h1>ADD TASK</h1><br>
+            <input type="date" name="Due-date" class="box" placeholder="Due-date" id="due-date" required><br><br>
+            <input type="text" name="data-description" class="box" placeholder="data-description" id="data-description"
+                required><br><br>
+            <input type="submit" id="submit">
+
+        </form>
+        <div class="side">
+            <img src="https://thumbs.dreamstime.com/b/yes-can-positive-inspiring-statement-banner-two-men-holding-clean-background-33109542.jpg"
+                alt="">
+        </div>
+
+    </div>
+
+    </div>
+
+    <script>
+
+        document.getElementById('newtask').addEventListener('submit', async (e) => {
+            e.preventDefault()
+            let dueDate = document.getElementById('due-date').value
+            let taskDescription = document.getElementById('data-description').value
+            let taskObj = {
+                dueDate,
+                taskDescription
+            }
+
+            let response = await axios.post('http://localhost:3000/api/v1/add-task', taskObj)
+            if (response.data.msg) {
+
+                alert(response.data.msg)
+                window.location.href = 'http://localhost:3000/task-card.html'
+            }
+            // console.log(response.data);
+        })
+
+
+    </script>
+
+</body>
+
+</html>

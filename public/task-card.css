@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&family=Lato:ital,wght@0,300;1,400&family=Open+Sans&family=Poppins:ital,wght@0,500;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Radio+Canada:wght@300;400;500;600&family=Roboto+Condensed:ital,wght@0,700;1,300;1,400&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,300;1,500&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    text-transform: capitalize;
+    transition: all 3.0 linear;
+}
+
+body {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    /* background-color: white; */
+    background-image: url(https://t3.ftcdn.net/jpg/04/62/90/88/360_F_462908801_QcQ0SQrsE8xoYctJcRNCK0Yaz0vlVQ0F.jpg);
+    background-size: cover;
+}
+
+#main-card {
+    /* width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #74ebd5;
+    background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100); */
+    /* background-color: rgb(70, 70, 202); */
+    width: 60vw;
+    min-height: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 30px;
+
+
+
+}
+
+.c1 {
+    width: 60vw;
+    height: 260px;
+    margin-bottom: 20px;
+    /* min-height: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 30px;  */
+    /* background-color: skyblue; */
+    background-image: url(https://m.media-amazon.com/images/I/31uVu4NuEgL._AC_SY450_.jpg);
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 40px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+
+}
+
+h1 {
+    font-size: 45px;
+    padding: 20px;
+    color: rgb(71, 14, 37);
+    font-style: italic;
+
+
+}
+
+.c1 p {
+    padding: 10px;
+}
+
+.c1:hover {
+    /* background-color: lightgreen; */
+    /* background-image: url(https://img.freepik.com/premium-vector/soft-gradient-pink-background_38782-383.jpg); */
+    background-image: url(https://image.shutterstock.com/image-vector/pink-gradient-background-260nw-485370739.jpg);
+}
+
+button {
+    width: 140px;
+    height: 40px;
+    /* background-color: blue; */
+    color: beige;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 40px;
+    box-shadow: 3px -3px black;
+}
+
+.edit {
+    /* background-color: blueviolet; */
+    background-color: brown;
+}
+
+.edit:hover {
+    background-color: rgb(75, 25, 25);
+}
+
+.delete-btn {
+    /* background-color: red; */
+    background-color: red;
+}
+
+.delete-btn:hover {
+    background-color: rgb(200, 32, 32);
+}
+
+.complete {
+    /* background-color: green; */
+    background-color: green;
+}
+
+#container {
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,177 @@
+body {
+    background-image: url(https://images.pexels.com/photos/4300715/pexels-photo-4300715.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+}
+
+
+.container {
+    height: 500px;
+    width: 800px;
+    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG5_ee4fGpgntZEkayn_yTs7eYE_iCg_3JXg&usqp=CAU); */
+    display: flex;
+    border: 1px solid rgb(30, 20, 95);
+    /* background-size: cover; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 25px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+    box-shadow: 3px 3px rgb(6, 16, 32);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    /* color: #fff;
+    font-size: 2rem;
+    border-bottom: 4px solid rgba(225, 225, 225, 0.5); */
+    background-color: skyblue;
+
+}
+
+
+.box {
+    padding: 12px;
+    margin: 15px;
+    width: 65%;
+    border: 1px solid rgb(6, 16, 32);
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 3px 3px rgb(6, 16, 32);
+
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 40px;
+    color: rgb(34, 66, 174);
+}
+
+
+h1:hover {
+    color: rgb(3, 25, 59);
+
+}
+
+#submit {
+    padding: 10px 30px;
+    margin-top: 40px;
+    width: 40%;
+    background-color: rgb(29, 97, 215);
+    font-weight: bold;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 3px 3px rgb(6, 16, 32);
+}
+
+
+#submit:hover {
+    cursor: pointer;
+    background-color: rgb(32, 70, 85);
+    color: white;
+}
+
+/* 
+::placeholder {
+    color: white;
+}
+
+::placeholder:hover {
+    color: rgb(161, 111, 208);
+} */
+.side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 50%; */
+    /* background-color: rgb(61, 61, 163); */
+
+}
+
+.side img {
+    width: 450px;
+    height: 500px;
+
+}
+
+
+
+
+
+
+/* task card.css */
+body {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.c1 {
+    /* background-color: aqua; */
+    /* height: 60vh;
+    margin-top: 30px;
+    box-shadow: inset 5px 5px 10px #064616,
+        inset -5px -5px 10px rgb(34, 52, 39);
+    padding: 20px;
+    /* background-color: white; */
+    /* background-image: url(https://wallpaperbat.com/img/719449-light-green-gradient-wallpaper.png); */
+    background-color: rgb(70, 70, 202);
+    width: 60vw;
+    min-height: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 30px;
+
+
+}
+
+h1 {
+    text-align: center;
+    color: #064616;
+
+}
+
+/* 
+input {
+
+    width: 450px;
+    height: 30px;
+    margin: 10px;
+    background-color: rgb(125, 179, 138);
+    color: #000000;
+
+}
+
+
+
+.Conform {
+
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+    background-color: rgb(81, 179, 91);
+
+} */
+
+button {
+    height: 34px;
+    margin: 10px;
+    width: 80px;
+    /* background-color: rgb(81, 179, 91); */
+
+
+}
+
+p {
+    text-align: justify;
+    text-align: center;
+
+}
